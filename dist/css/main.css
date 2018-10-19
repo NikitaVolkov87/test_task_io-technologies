@@ -1,1 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: #04102c;
+  font-family: 'Lato', sans-serif;
+}
 
+.block__login_page {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  align-items: center;
+}
