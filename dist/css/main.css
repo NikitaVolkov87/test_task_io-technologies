@@ -15,8 +15,20 @@ body {
   align-items: center;
 }
 
+.hide {
+  display: none !important;
+}
 
 
+
+.subblock {
+  width: 100%;
+}
+
+.container__login_form {
+  max-width: 300px;
+  margin: auto;
+}
 /* --------------- HELP_form --------------- */
 .subblock__help {
   position: relative;
@@ -28,8 +40,8 @@ body {
 /*help background*/
 .container__help_background {
   position: absolute;
-  z-index: -1;
-  transform: translate(-80%, -53%);
+  z-index: -10;
+  transform: translate(-75%, -53%);
 }
 
 .help_background_figure {
@@ -131,12 +143,14 @@ body {
 .reset-password-link {
   text-decoration: none;
   color: #00bdff;
+  cursor: pointer;
 }
 
 .error-name {
   position: absolute;
   right: 0;
-  transform: translate(100%, 0);
+  transform: translate(100%, 5px);
+  display: block;
 }
 
 .error-block_square {
@@ -156,5 +170,9 @@ body {
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: red;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, 15px) rotate(45deg);
+  z-index: -1;
+  background-color: white;
 }
