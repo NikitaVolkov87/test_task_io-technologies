@@ -8,7 +8,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="dist/css/main.css">
 </head>
-<body>
+<body onload="goTo()">
 
 
 	<div class="block block__login_page">
@@ -17,8 +17,9 @@
 				<div class="row row__login_form">
 					<div class="col col__login_form">
 						<div class="col-item col__login_form-item">
+
 							<!-- form 1 -->
-							<h2>Welcome back</h2>
+							<!-- <h2>Welcome back</h2>
 							<p>Sign in to continue to IO Technologies.</p>
 							<form class="login__form" action="">
 								<input class="login__form_input" id="input_user-name" type="text" placeholder="Your email" oninput="onInput('name')" onblur="onInputBlur('name')">
@@ -31,9 +32,21 @@
 								<input class="login__form_input" id="input_user-password" type="password" placeholder="Password" oninput="onInput('password')" onblur="onInputBlur('password')">
 								<button class="login__form_submit" type="submit">Log in</button>
 							</form>
-							<p>Forgot your password? <span class="reset-password-link" onclick="resetPassword()">Reset</span></p>
-							<!-- form 2 -->
+							<p>Forgot your password? <span class="reset-password-link" onclick="goTo('resetPassword')">Reset</span></p> -->
 							
+							<!-- form 2 -->
+							<!-- <h2>Forgot password?</h2>
+							<form class="login__form" action="" onsubmit="goTo('standart')">
+								<input class="login__form_input" id="input_user-name" type="text" placeholder="Enter your email" oninput="onInput('name')" onblur="onInputBlur('name')">
+								<div class="error-name hide">
+									<div class="error-block_square">
+										<p class="error-text">Oops! You entered an invalid email</p>
+										<div class="error-block_arrow"></div>
+									</div>
+								</div>
+								<button class="login__form_submit" type="submit">Send me instructions</button>
+							</form> -->
+
 						</div>
 					</div>
 				</div>
