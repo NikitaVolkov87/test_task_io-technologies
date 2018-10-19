@@ -4,6 +4,7 @@ body {
   color: white;
   background-color: #04102c;
   font-family: 'Lato', sans-serif;
+  overflow: hidden;
 }
 
 .block__login_page {
@@ -13,3 +14,58 @@ body {
   flex-direction: row-reverse;
   align-items: center;
 }
+
+
+
+/* --------------- HELP_form --------------- */
+.subblock__help {
+  position: relative;
+}
+
+.col__help {
+  text-align: center;
+}
+/*help background*/
+.container__help_background {
+  position: absolute;
+  z-index: -1;
+  transform: translate(-80%, -53%);
+}
+
+.help_background_figure {
+  width: 2500px;
+  height: 2500px;
+  background: linear-gradient(#3baadf, #675cc6);
+  border-radius: 100%;
+}
+/*help*/
+.help_button {
+  width: 150px;
+  height: 40px;
+  color: white;
+  background-color: #7299d8;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 0 1px 5px 0px #456598;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: .5s box-shadow;
+}
+.help_button:hover {
+  box-shadow: 0 1px 5px 2px #456598
+}
+
+.help_logo {
+  width: 180px;
+}
+
+.help_logo_link {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.help_button-splitter {
+  margin: 10px;
+}
+
