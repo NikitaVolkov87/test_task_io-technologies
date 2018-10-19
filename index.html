@@ -10,34 +10,21 @@
 <body>
 
 
-	<div class="app">
-		<form action="javascript:formSubmit();">
-			<h3>Check out commits App</h3>
-			<fieldset>
-				<legend>Enter user name</legend>
-				<input id="githubUser" type="text">	
-			</fieldset>
-			<fieldset>
-				<legend>Enter user's repository name</legend>
-				<input id="userRepo" type="text">
-			</fieldset>
-			<button type="submit">Get commits</button>
-			<hr>
-		</form>
-		<div id="test">
-			<button onclick="fillInValues()">autofill test user and repo</button>
+	<div class="block__login_page">
+		<div class="subblock__login_form">
+			<div class="container container__login_form">
+				<div class="row row__login_form">
+					<h2>Welcome back</h2>
+					<p>Sign in to continue to IO Technologies.</p>
+					<form action="">
+						<input type="text">Your email
+						<input type="text">Password
+					</form>
+				</div>
+			</div>
 		</div>
-		<div id="pageNav_wrapper">
-			<h4>Navigation over pages:</h4>
-			<div id="pageNav"></div>
-		</div>
-		<div id="commits_wrapper">
-			<h4>User commits:</h4>
-			<div id="commits"></div>
-		</div>
-		<div id="details_wrapper">
-			<h4>Commit details:</h4>
-			<div id="details"></div>
+		<div class="subblock__help">
+			
 		</div>
 	</div>
 
