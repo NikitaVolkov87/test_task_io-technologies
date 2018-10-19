@@ -12,13 +12,19 @@ function forms(item) {
 					</div>
 				</div>
 				<input class="login__form_input" id="input_user-password" type="password" placeholder="Password" oninput="onInput('password')">
-				<button class="login__form_submit" type="submit" onclick="goTo('profile')">Log in</button>
+				<div class="error-password hide">
+					<div class="error-block_square">
+						<p class="error-text">Enter any 4 symbols</p>
+						<div class="error-block_arrow"></div>
+					</div>
+				</div>
+				<button class="login__form_submit" type="submit" onclick="return goTo('profile')">Log in</button>
 			</form>
 			<p>Forgot your password? <span class="reset-password-link" onclick="goTo('resetPassword', false)">Reset</span></p>
 		`;
 	} else if ( item === 'resetPassword' ) {
 		return `
-			<p onclick="goTo('standart', false)">go back</p>
+			<i class="fas fa-arrow-left" onclick="goTo('standart', false)"></i>
 			<h2>Forgot password?</h2>
 			<form class="login__form" action="">
 				<input class="login__form_input" id="input_user-name" type="text" placeholder="Enter your email" oninput="onInput('name')" onkeypress="checkDirtyForm('name')" onblur="checkForm('name')">
@@ -35,6 +41,7 @@ function forms(item) {
 		// alert('You are in profile!');
 		return `
 			<p>You are in your profile!</p>
+			<p>Hello, ${email}</p>
 		`
 	}
 }
@@ -76,9 +83,11 @@ function checkForm(item) {
 		}
 	} else if ( item === 'password' ) {
 		if ( inputEl.value.length !== 4 ) {
-			alert('password error');
+			alert('Incorrect password!');
+			errorEl.classList.remove('hide');
 			return false;
 		} else {
+			errorEl.classList.add('hide');
 			return true;
 		}
 	}
@@ -97,10 +106,10 @@ function goTo(item, check = true) {
 	if (check) {
 		if ( !formError ) {
 			if ( item === 'profile' ) {
+				console.log(event);
 				if ( checkForm('password') ) {
 					form.innerHTML = forms(item);
 				} else {
-					console.log('sorian!');
 					return false;
 				}
 			} else {
@@ -109,8 +118,10 @@ function goTo(item, check = true) {
 				if ( email ) {
 					document.getElementById('input_user-name').value = email;
 				}
+				if ( item === 'standart' ) {
+					alert('Instructions have been sent.');
+				}
 			}
-			// если форма пуста, то при нажатии на сабмит выпадет ошибка и сабмит станет disabled
 		}
 	} else {
 		console.log('form NOT checked');
@@ -125,7 +136,9 @@ function goTo(item, check = true) {
 function loadStartForm() {
 	let form = document.getElementsByClassName('col__login_form-item')[0];
 	form.innerHTML = forms();
-	// document.body.appendChild('login');
+	if ( email ) {
+		document.getElementById('input_user-name').value = email;
+	}
 }
 
 function test1(e) {
