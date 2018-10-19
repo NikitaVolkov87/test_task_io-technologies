@@ -75,6 +75,7 @@ body {
 .login__form {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .col__login_form-item {
@@ -119,3 +120,41 @@ body {
   transition: .5s box-shadow;
 }
 
+.input-name-has-value {
+  border-bottom: 1px solid #00be98;
+}
+
+.input-password-has-value {
+  border-bottom: 1px solid #00bdff;
+}
+
+.reset-password-link {
+  text-decoration: none;
+  color: #00bdff;
+}
+
+.error-name {
+  position: absolute;
+  right: 0;
+  transform: translate(100%, 0);
+}
+
+.error-block_square {
+  width: 120px;
+  background-color: white;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 0.8rem;
+  position: relative;
+}
+
+.error-text {
+  margin: 0;
+}
+
+.error-block_arrow {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+}
