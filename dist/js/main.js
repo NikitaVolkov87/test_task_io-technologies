@@ -18,7 +18,7 @@ function forms(item) {
 						<div class="error-block_arrow"></div>
 					</div>
 				</div>
-				<button class="login__form_submit" type="submit" onclick="return goTo('profile')">Log in</button>
+				<button class="login__form_submit" type="submit" onclick="return goTo('profile')">Log in<i class="fas fa-arrow-right"></i></button>
 			</form>
 			<p>Forgot your password? <span class="reset-password-link" onclick="goTo('resetPassword', false)">Reset</span></p>
 		`;

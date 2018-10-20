@@ -31,7 +31,7 @@ body {
 }
 /* --------------- HELP_form --------------- */
 .subblock__help {
-  position: relative;
+  /*position: relative;*/
 }
 
 .col__help {
@@ -41,9 +41,9 @@ body {
 .container__help_background {
   position: absolute;
   z-index: -10;
-  left: 0;
+  right: 0;
   top: 0;
-  transform: translate(-50%, -50%) scale(.3, 0.6);
+  transform: translate(0%, -32%) scale(0.5, 0.8);
 }
 
 .help_background_figure {
@@ -206,6 +206,10 @@ body {
   font-size: 1.5rem;
 }
 
+.fa-arrow-right {
+  margin-left: 10px;
+}
+
 .login__form_title_forgot-pass {
   margin: 40px 0 !important;
 }
@@ -228,4 +232,22 @@ body {
 }
 .project_choice>p:hover {
   color: #fff;
+}
+
+
+
+
+/* --------------- MEDIA QUERIES --------------- */
+@media (max-width: 800px){
+  .block__login_page {
+    flex-direction: column;
+  }
+
+  .row {
+    margin: 10px;
+  }
+
+  .error-name {
+    transform: translate(0, 10px);
+  }
 }
