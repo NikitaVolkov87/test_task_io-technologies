@@ -25,7 +25,7 @@ function forms(item) {
 	} else if ( item === 'resetPassword' ) {
 		return `
 			<i class="fas fa-arrow-left" onclick="goTo('standart', false)"></i>
-			<h2>Forgot password?</h2>
+			<h2 class="login__form_title_forgot-pass">Forgot password?</h2>
 			<form class="login__form" action="">
 				<input class="login__form_input" id="input_user-name" type="text" placeholder="Enter your email" oninput="onInput('name')" onkeypress="checkDirtyForm('name')" onblur="checkForm('name')">
 				<div class="error-name hide">
@@ -38,10 +38,17 @@ function forms(item) {
 			</form>
 		`;
 	} else if ( item === 'profile' ) {
-		// alert('You are in profile!');
 		return `
-			<p>You are in your profile!</p>
-			<p>Hello, ${email}</p>
+			<div class="profile__container">
+				<h2>Hello, ${email.split('@')[0][0].toUpperCase()+email.split('@')[0].slice(1).toLowerCase()}!</h2>
+				<p>Please choose your project.</p>
+				<div class="project_choice">
+					<p>Flirchi</p>
+					<p>io</p>
+					<p>company name</p>
+					<p>facenews.com</p>
+				</div>
+			</div>
 		`
 	}
 }
@@ -106,7 +113,6 @@ function goTo(item, check = true) {
 	if (check) {
 		if ( !formError ) {
 			if ( item === 'profile' ) {
-				console.log(event);
 				if ( checkForm('password') ) {
 					form.innerHTML = forms(item);
 				} else {
@@ -114,17 +120,15 @@ function goTo(item, check = true) {
 				}
 			} else {
 				form.innerHTML = forms(item);
-				console.log('form checked!');
 				if ( email ) {
 					document.getElementById('input_user-name').value = email;
 				}
 				if ( item === 'standart' ) {
-					alert('Instructions have been sent.');
+					alert(`Instructions have been sent to: \n${email}`);
 				}
 			}
 		}
 	} else {
-		console.log('form NOT checked');
 		formDirty = false;
 		form.innerHTML = forms(item);
 		if ( email ) {
