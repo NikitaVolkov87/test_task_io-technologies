@@ -10,7 +10,7 @@ https://NikitaVolkov87.github.io/test_task_io-technologies/
 
 ## В работе использовалось
 * html
-* css (без Bootstrap, SASS и LESS)
+* css (без Bootstrap, SASS или LESS)
 * js (чистый js, без jQuery и каких-либо фреймворков)
 * подключено было только:
   - один из шрифтов https://fonts.google.com/
