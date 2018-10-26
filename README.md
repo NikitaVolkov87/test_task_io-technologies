@@ -5,6 +5,7 @@
 https://NikitaVolkov87.github.io/test_task_io-technologies/
 * локально:
   - <i>git clone https://github.com/NikitaVolkov87/test_task_io-technologies.git</i>
+  - <i>cd test_task_io-technologies</i>
   - <i>start index.html</i>
 
 ## В работе использовалось
